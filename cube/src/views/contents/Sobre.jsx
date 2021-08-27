@@ -5,7 +5,6 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 import ContatoHome from '../../views/contents/ContatoHome'
-import SobreCompleto from '../../views/contents/SobreCompleto'
 
 const Sobre = props => (
     <div>
@@ -30,14 +29,21 @@ const Sobre = props => (
                     <Nav.Link href="#contato">Contato</Nav.Link>
                 </Nav>
             </Container>
-        </Navbar>
-        
-        <a id="sobre"> <SobreCompleto /> </a> <br />
-
+        </Navbar>    
+        <div>
+            <br /> <br />
+            <b><h3>Sobre nosso projeto</h3></b>
+            <h4>
+                A ideia do projeto saiu do interesse dos membros do projeto, em relação ao cubo mágico. Escolhemos explicar e ensinar como montar o cubo mágico de olhos vendados por conta da falta de informações 
+                escritas em português, o que se torna uma barreira para muitos. Para realização, escolhemos explicar o método "Old Pochmann", que é o método de iniciantes para resolução do cubo mágico de olhos 
+                vendados. Sendo o site o passo inicial para aqueles que querem montar o cubo 3X3X3 com os olhos vendados. O site possuirá um layout simples, no qual o usuário irá criar uma conta no site, nos 
+                permitindo melhor controle. Após a criação da conta, o usuário terá acesso a todos os materiais disponíveis para o seu aprendizado.
+            </h4>
+        </div>
+        <br />
         <div className="rodape">
             <a id="contato"> <ContatoHome /> </a>
         </div>
-
     </div>
 )
 

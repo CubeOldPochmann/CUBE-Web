@@ -35,21 +35,14 @@ const Home = props => (
                 </Nav>
             </Container>
         </Navbar>
-
-        <Image src="https://images.hdqwalls.com/download/rubik-cube-5k-8r-2560x1080.jpg" fluid />
-        
-        <a id="sobre"> <SobreHome /> </a> <br />
-        
+        <Image src="https://images.hdqwalls.com/download/rubik-cube-5k-8r-2560x1080.jpg" fluid />  
+        <a id="sobre"> <SobreHome /> </a> <br />  
         <Button variant="primary" href="/sobre">Saiba Mais...</Button> <br />
-
         <EquipeHome /> <br />
-
         <a id="materiais"> <MateriaisCards /> </a> <br />
-
         <div className="rodape">
             <a id="contato"> <ContatoHome /> </a>
-        </div>
-        
+        </div>   
     </div>
 )
 
