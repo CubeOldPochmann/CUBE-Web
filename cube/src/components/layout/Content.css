@@ -8,18 +8,8 @@
     padding: 0px;
 }
 
-h1 {
-    font-family: fantasy;
-    align-content: center;
-    flex: 1;
-    padding: 0px;
-    margin-bottom: 0px;        
-    color: white;
-    text-align: center;     
-    font-size:5rem; 
-    margin-top: 0%;
-    background-color: rgb(255, 217, 0);
-    height: 110px;
+h1 {     
+    color: #e21313;
 }
 
 h2{
@@ -60,9 +50,9 @@ h4 {
     font-weight: lighter;
     align-content: center;
     flex: 1;  
-    margin-top: 50px;   
-    margin-left: 50px;  
-    margin-right: 50px; 
+    margin-top: 20px;   
+    margin-left: 150px;  
+    margin-right: 150px; 
     color: black;
     text-align: justify;     
     font-size: 1.5rem; 

@@ -1,14 +1,72 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import Carousel from 'react-bootstrap/Carousel'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 const Home = props => (
     <div>
-        <b><h1>CUBE: Old Pochmann</h1></b>
-        <img 
-            src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg" 
-            style={{width: '100%'}}
-        />
-        <h2><Link to="/conteudo01/Gabriel">Veja mais sobre<br></br>o projeto aqui!</Link></h2>
+        <Navbar bg="primary" variant="dark" fixed="top">
+            <Container>
+                <Navbar.Brand href="/">
+                    <img
+                    alt=""
+                    src="https://economaster.com.br/wp-content/uploads/cubosolution.gif"
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                    />{' '}
+                    CUBE: Old Pochmann
+                </Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link href="/sobre">Sobre</Nav.Link>
+                    <NavDropdown title="Materiais" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="*">O que é cubo mágico</NavDropdown.Item>
+                        <NavDropdown.Item href="*">O que é Old Pochmann</NavDropdown.Item>
+                    </NavDropdown>
+                    <Nav.Link href="/contato">Contato</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+        <Carousel>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg"
+                />
+                <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg"
+                alt="Second slide"
+                />
+                <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg"
+                alt="Third slide"
+                />
+                <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
     </div>
 )
 
