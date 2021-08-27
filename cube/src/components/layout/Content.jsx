@@ -5,7 +5,6 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../../views/contents/Home'
 import Conteudo01 from '../../views/contents/Conteudo01'
 import Sobre from '../../views/contents/Sobre'
-import Contato from '../../views/contents/Contato'
 import NaoEncontrado from '../../views/contents/NaoEncontrado'
 
 const Content = props => (
@@ -19,9 +18,6 @@ const Content = props => (
             </Route>
             <Route path="/sobre">
                 <Sobre />
-            </Route>
-            <Route path="/contato">
-                <Contato />
             </Route>
             <Route path="*">
                 <NaoEncontrado />

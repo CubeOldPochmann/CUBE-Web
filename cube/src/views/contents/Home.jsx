@@ -3,11 +3,13 @@ import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import Carousel from 'react-bootstrap/Carousel'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
+import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
+
+import ContatoHome from '../../views/contents/ContatoHome'
+import SobreHome from '../../views/contents/SobreHome'
+import EquipeHome from '../../views/contents/EquipeHome'
+import MateriaisCards from '../../views/contents/MateriaisCards'
 
 const Home = props => (
     <div>
@@ -24,49 +26,30 @@ const Home = props => (
                     CUBE: Old Pochmann
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="/sobre">Sobre</Nav.Link>
+                    <Nav.Link href="#sobre">Sobre</Nav.Link>
                     <NavDropdown title="Materiais" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="*">O que é cubo mágico</NavDropdown.Item>
-                        <NavDropdown.Item href="*">O que é Old Pochmann</NavDropdown.Item>
+                        <NavDropdown.Item href="#materiais">O que é cubo mágico</NavDropdown.Item>
+                        <NavDropdown.Item href="#materiais">O que é Old Pochmann</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/contato">Contato</Nav.Link>
+                    <Nav.Link href="#contato">Contato</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
-        <Carousel>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg"
-                />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg"
-                alt="Second slide"
-                />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src="https://images.wallpaperscraft.com/image/rubiks_cube_cube_puzzle_colorful_111816_2560x1024.jpg"
-                alt="Third slide"
-                />
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
+
+        <Image src="https://images.hdqwalls.com/download/rubik-cube-5k-8r-2560x1080.jpg" fluid />
+        
+        <a id="sobre"> <SobreHome /> </a> <br />
+        
+        <Button variant="primary" href="/sobre">Saiba Mais...</Button> <br />
+
+        <EquipeHome /> <br />
+
+        <a id="materiais"> <MateriaisCards /> </a> <br />
+
+        <div className="rodape">
+            <a id="contato"> <ContatoHome /> </a>
+        </div>
+        
     </div>
 )
 

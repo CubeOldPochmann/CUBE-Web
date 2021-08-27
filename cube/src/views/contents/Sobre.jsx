@@ -4,9 +4,12 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
+import ContatoHome from '../../views/contents/ContatoHome'
+import SobreCompleto from '../../views/contents/SobreCompleto'
+
 const Sobre = props => (
     <div>
-        <Navbar bg="primary" variant="dark">   
+        <Navbar bg="primary" variant="dark" fixed="top">
             <Container>
                 <Navbar.Brand href="/">
                     <img
@@ -19,20 +22,22 @@ const Sobre = props => (
                     CUBE: Old Pochmann
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                <Nav.Link href="/sobre">Sobre</Nav.Link>
+                    <Nav.Link href="#sobre">Sobre</Nav.Link>
                     <NavDropdown title="Materiais" id="basic-nav-dropdown">
                         <NavDropdown.Item href="*">O que é cubo mágico</NavDropdown.Item>
                         <NavDropdown.Item href="*">O que é Old Pochmann</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/contato">Contato</Nav.Link>
+                    <Nav.Link href="#contato">Contato</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
-        <b><h3>Sobre nosso projeto</h3></b>
-        <h4>
-            A ideia do projeto saiu do interesse dos membros do projeto, em relação ao cubo mágico. Escolhemos explicar e ensinar como montar o cubo mágico de olhos vendados por conta da falta de informações escritas em português, o que se torna uma barreira para muitos.
-            Para realização, escolhemos explicar o método "Old Pochmann", que é o método de iniciantes para resolução do cubo mágico de olhos vendados. Sendo o site o passo inicial para aqueles que querem montar o cubo 3X3X3 com os olhos vendados.
-        </h4>
+        
+        <a id="sobre"> <SobreCompleto /> </a> <br />
+
+        <div className="rodape">
+            <a id="contato"> <ContatoHome /> </a>
+        </div>
+
     </div>
 )
 
